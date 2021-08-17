@@ -7,5 +7,8 @@ namespace Acerpro.Business.Abstruct
     public interface ICountryCurrencyService : IService<CountryCurrencyCreateDto, CountryCurrencyDto>
     {
         Task<IResult> GetCountryList();
+        Task<IResult> CountryCurrency(string countryIsoCode);
+        Task<IResult> CapitalCity(string countryIsoCode);
+        Task<IResult> CountryIsoCode(string countryName);
     }
 }

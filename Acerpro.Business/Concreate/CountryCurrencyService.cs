@@ -76,6 +76,57 @@ namespace Acerpro.Business.Concreate
             }
         }
 
+        public async Task<IResult> CountryCurrency(string countryIsoCode)
+        {
+            try
+            {
+                return new SuccessResult<CurrencyDto>(await Task.Run(() => _countryInfoIntegration.CountryCurrency(countryIsoCode)),
+                    "Country and Currency");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
+
+        public async Task<IResult> CapitalCity(string countryIsoCode)
+        {
+            try
+            {
+                return new SuccessResult<string>(await Task.Run(() => _countryInfoIntegration.CapitalCity(countryIsoCode)),
+                    "Capital City");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
+
+        public async Task<IResult> GetCountryList()
+        {
+            try
+            {
+                return new SuccessResult<IList<CountryCodeAndNameDto>>(await Task.Run(() => _countryInfoIntegration.ListOfCountryNamesByCode()), 
+                    "List of Country");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
+
+        public async Task<IResult> CountryIsoCode(string countryName)
+        {
+            try
+            {
+                return new SuccessResult<string>(await Task.Run(() => _countryInfoIntegration.CountryISOCode(countryName)),
+                    "Country ISO Code");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
 
         private CountryCurrencyDto EntityToData(CountryCurrency currency)
         {
@@ -90,20 +141,6 @@ namespace Acerpro.Business.Concreate
                 CapitalCityName = currency.CapitalCityName,
                 CurrencyName = currency.CurrencyName
             };
-        }
-
-
-        public async Task<IResult> GetCountryList()
-        {
-            try
-            {
-                return new SuccessResult<IList<CountryCodeAndNameDto>>(await Task.Run(() => _countryInfoIntegration.ListOfCountryNamesByCode()), 
-                    "List of Country");
-            }
-            catch (Exception ex)
-            {
-                return new ErrorResult(ex.Message);
-            }
         }
 
         private CountryCurrency DataToEntity(CountryCurrencyCreateDto currency)
@@ -136,6 +173,5 @@ namespace Acerpro.Business.Concreate
                 ActiveFlag = true
             };
         }
-
     }
 }

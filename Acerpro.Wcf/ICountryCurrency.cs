@@ -1,4 +1,5 @@
-﻿using Acerpro.Entities.Concreate.Dtos.ServiceDtos;
+﻿using Acerpro.Entities.Concreate.Dtos;
+using Acerpro.Entities.Concreate.Dtos.ServiceDtos;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -7,8 +8,19 @@ using System.Threading.Tasks;
 namespace Acerpro.Wcf
 {
     [ServiceContract]
-    public interface IApplicationService
+    public interface ICountryCurrency
     {
+        [OperationContract]
+        Task<ServiceResult<IList<CountryCurrencyDto>>> GetAsync();
+
+        [OperationContract]
+        Task<ServiceResult<CountryCurrencyDto>> GetByIdAsync(int id);
+
+        [OperationContract]
+        Task<ServiceResult<CountryCurrencyDto>> SaveAsync(CountryCurrencyCreateDto createDto);
+
+        [OperationContract]
+        Task<ServiceResult<CountryCurrencyDto>> UpdateAsync(CountryCurrencyDto updateDto);
 
         [OperationContract]
         Task<ServiceResult<IList<CountryCodeAndNameDto>>> GetCountryListAsync();

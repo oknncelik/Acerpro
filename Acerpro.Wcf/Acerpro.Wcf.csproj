@@ -61,14 +61,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationService.svc" />
+    <Content Include="CountryCurrency.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationService.svc.cs">
-      <DependentUpon>ApplicationService.svc</DependentUpon>
+    <Compile Include="CountryCurrency.svc.cs">
+      <DependentUpon>CountryCurrency.svc</DependentUpon>
     </Compile>
-    <Compile Include="IApplicationService.cs" />
+    <Compile Include="ICountryCurrency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
