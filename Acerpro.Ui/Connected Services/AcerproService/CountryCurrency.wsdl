@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="CountryCurrency" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" />
+      <xsd:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" />
+      <xsd:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICountryCurrency_Get_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_Get_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetCountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetCountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CountryCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountryCurrency" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CountryCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountryCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CapitalCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CapitalCity" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CapitalCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CapitalCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CountryIsoCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountryIsoCode" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_CountryIsoCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountryIsoCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICountryCurrency">
+    <wsdl:operation name="Get">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/Get" message="tns:ICountryCurrency_Get_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/GetResponse" message="tns:ICountryCurrency_Get_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/GetById" message="tns:ICountryCurrency_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/GetByIdResponse" message="tns:ICountryCurrency_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/Save" message="tns:ICountryCurrency_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/SaveResponse" message="tns:ICountryCurrency_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/Update" message="tns:ICountryCurrency_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/UpdateResponse" message="tns:ICountryCurrency_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/GetCountryList" message="tns:ICountryCurrency_GetCountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/GetCountryListResponse" message="tns:ICountryCurrency_GetCountryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/CountryCurrency" message="tns:ICountryCurrency_CountryCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/CountryCurrencyResponse" message="tns:ICountryCurrency_CountryCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CapitalCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/CapitalCity" message="tns:ICountryCurrency_CapitalCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/CapitalCityResponse" message="tns:ICountryCurrency_CapitalCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryIsoCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/CountryIsoCode" message="tns:ICountryCurrency_CountryIsoCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/CountryIsoCodeResponse" message="tns:ICountryCurrency_CountryIsoCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICountryCurrency" type="tns:ICountryCurrency">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountryCurrency">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/CountryCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapitalCity">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/CapitalCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountryIsoCode">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/CountryIsoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CountryCurrency">
+    <wsdl:port name="BasicHttpBinding_ICountryCurrency" binding="tns:BasicHttpBinding_ICountryCurrency">
+      <soap:address location="http://localhost:53856/CountryCurrency.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

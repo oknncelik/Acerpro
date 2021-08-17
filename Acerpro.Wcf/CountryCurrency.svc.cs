@@ -16,7 +16,7 @@ namespace Acerpro.Wcf
 
         public CountryCurrency()
         {
-            _countryCurrencyService = new Business.Concreate.CountryCurrencyService();
+            _countryCurrencyService = new CountryCurrencyService();
         }
 
         public async Task<ServiceResult<IList<CountryCurrencyDto>>> GetAsync()
@@ -81,6 +81,45 @@ namespace Acerpro.Wcf
                 IsSuccess = result.IsSuccess,
                 ResultType = result.ResultType,
                 Result = (result as SuccessResult<IList<CountryCodeAndNameDto>>)?.Result
+            };
+        }
+
+        public async Task<ServiceResult<CurrencyDto>> CountryCurrencyAsync(string countryIsoCode)
+        {
+            var result = await _countryCurrencyService.CountryCurrency(countryIsoCode);
+            return new ServiceResult<CurrencyDto>
+            {
+                Code = result.Code,
+                Message = result.Message,
+                IsSuccess = result.IsSuccess,
+                ResultType = result.ResultType,
+                Result = (result as SuccessResult<CurrencyDto>)?.Result
+            };
+        }
+
+        public async Task<ServiceResult<string>> CapitalCityAsync(string countryIsoCode)
+        {
+            var result = await _countryCurrencyService.CountryCurrency(countryIsoCode);
+            return new ServiceResult<string>
+            {
+                Code = result.Code,
+                Message = result.Message,
+                IsSuccess = result.IsSuccess,
+                ResultType = result.ResultType,
+                Result = (result as SuccessResult<string>)?.Result
+            };
+        }
+
+        public async Task<ServiceResult<string>> CountryIsoCodeAsync(string countryName)
+        {
+            var result = await _countryCurrencyService.CountryIsoCode(countryName);
+            return new ServiceResult<string>
+            {
+                Code = result.Code,
+                Message = result.Message,
+                IsSuccess = result.IsSuccess,
+                ResultType = result.ResultType,
+                Result = (result as SuccessResult<string>)?.Result
             };
         }
     }

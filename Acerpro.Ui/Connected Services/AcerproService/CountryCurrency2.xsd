@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" />
+  <xs:import schemaLocation="http://localhost:53856/CountryCurrency.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" />
+  <xs:complexType name="ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCountryCurrencyDto" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" minOccurs="0" name="Result" nillable="true" type="q1:ArrayOfCountryCurrencyDto" />
+      <xs:element minOccurs="0" name="ResultType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi" nillable="true" type="tns:ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi" />
+  <xs:complexType name="ServiceResultOfCountryCurrencyDtoNGKS6tMi">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CountryCurrencyDto" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos" minOccurs="0" name="Result" nillable="true" type="q2:CountryCurrencyDto" />
+      <xs:element minOccurs="0" name="ResultType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResultOfCountryCurrencyDtoNGKS6tMi" nillable="true" type="tns:ServiceResultOfCountryCurrencyDtoNGKS6tMi" />
+  <xs:complexType name="ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCountryCodeAndNameDto" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" minOccurs="0" name="Result" nillable="true" type="q3:ArrayOfCountryCodeAndNameDto" />
+      <xs:element minOccurs="0" name="ResultType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW" nillable="true" type="tns:ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW" />
+  <xs:complexType name="ServiceResultOfCurrencyDtoJLzdrnDW">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CurrencyDto" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDtos" minOccurs="0" name="Result" nillable="true" type="q4:CurrencyDto" />
+      <xs:element minOccurs="0" name="ResultType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResultOfCurrencyDtoJLzdrnDW" nillable="true" type="tns:ServiceResultOfCurrencyDtoJLzdrnDW" />
+  <xs:complexType name="ServiceResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Wcf" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResultOfstring" nillable="true" type="tns:ServiceResultOfstring" />
+</xs:schema>

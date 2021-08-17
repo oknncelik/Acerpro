@@ -24,6 +24,15 @@ namespace Acerpro.Wcf
 
         [OperationContract]
         Task<ServiceResult<IList<CountryCodeAndNameDto>>> GetCountryListAsync();
+
+        [OperationContract]
+        Task<ServiceResult<CurrencyDto>> CountryCurrencyAsync(string countryIsoCode);
+
+        [OperationContract]
+        Task<ServiceResult<string>> CapitalCityAsync(string countryIsoCode);
+
+        [OperationContract]
+        Task<ServiceResult<string>> CountryIsoCodeAsync(string countryName);
     }
 
 

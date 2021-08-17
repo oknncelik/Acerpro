@@ -1,0 +1,20 @@
+﻿@model Acerpro.Ui.Models.CountryModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+<div class="container>
+    <div class="row">
+        @Html.DropDownList("drCountry", ViewBag.CoutryList as IEnumerable<SelectListItem>, "Select Country", 
+                           new { @class = "form-control", onchange = "SelectCountry(this.value)" })
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    function SelectCountry(val) {
+        alert(val);
+    }
+</script> 
