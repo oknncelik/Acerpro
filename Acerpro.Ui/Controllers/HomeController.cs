@@ -12,6 +12,7 @@ namespace Acerpro.Ui.Controllers
         public async Task<ActionResult> Index()
         {
             service = new CountryCurrencyClient();
+            
             var countryList = await service.GetCountryListAsync();
             List<SelectListItem> listItems = new List<SelectListItem>();
             foreach (var selectListItem in countryList.Result)

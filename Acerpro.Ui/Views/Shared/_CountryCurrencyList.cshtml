@@ -6,7 +6,7 @@
             <th> Ülke Başkent </th>
             <th> Ülke Kısaltması </th>
             <th> Ülke Para Birimi </th>
-            <th class="center" style="width: 140px;">  </th>
+            <th class="center" style="width: 140px;">İşlemler </th>
         </tr>
     </thead>
     <tbody>
@@ -17,19 +17,8 @@
                 <td> @item.CapitalCity </td>
                 <td> @item.CountryIsoCode </td>
                 <td> @item.CountryCurrency </td>
-                <td>
-                    @*@Html.Action("Kaydet", new { onclick = "SaveCountry(" + @item.CapitalCity + ")" });*@
-                </td>
+                <td> </td>
             </tr>
         }
     </tbody>
 </table>
-
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-
-<script>
-    function SaveCountry(result) {
-        alert(result);
-    }
-</script>
