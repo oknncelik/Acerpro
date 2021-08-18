@@ -37,10 +37,10 @@ namespace Acerpro.Business.Concreate
                 {
                     new CountryCurrencyDto
                     {
-                        CurrencyName = $"{currency.ISOCode}({currency.Name})",
+                        CurrencyName = $"{currency?.ISOCode}({currency?.Name})",
                         CapitalCityName = capitalCity,
-                        CountryCode = currency.ISOCode,
-                        CountryName = country.Name
+                        CountryCode = currency?.ISOCode,
+                        CountryName = country?.Name
                     } 
                 };
                 return new SuccessResult<IList<CountryCurrencyDto>>(result, "List of Countries and Currencies");

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Acerpro.Ui.AcerproService {
+namespace Acerpro.Business.CountryCurrencyWcfService {
     using System.Runtime.Serialization;
     using System;
     
@@ -32,7 +32,7 @@ namespace Acerpro.Ui.AcerproService {
         private string MessageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Acerpro.Ui.AcerproService.CountryCurrencyDto[] ResultField;
+        private Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto[] ResultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ResultTypeField;
@@ -87,7 +87,7 @@ namespace Acerpro.Ui.AcerproService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Acerpro.Ui.AcerproService.CountryCurrencyDto[] Result {
+        public Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto[] Result {
             get {
                 return this.ResultField;
             }
@@ -108,115 +108,6 @@ namespace Acerpro.Ui.AcerproService {
                 if ((object.ReferenceEquals(this.ResultTypeField, value) != true)) {
                     this.ResultTypeField = value;
                     this.RaisePropertyChanged("ResultType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CountryCurrencyDto", Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos")]
-    [System.SerializableAttribute()]
-    public partial class CountryCurrencyDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CapitalCityNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CurrencyNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CapitalCityName {
-            get {
-                return this.CapitalCityNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CapitalCityNameField, value) != true)) {
-                    this.CapitalCityNameField = value;
-                    this.RaisePropertyChanged("CapitalCityName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryCode {
-            get {
-                return this.CountryCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryCodeField, value) != true)) {
-                    this.CountryCodeField = value;
-                    this.RaisePropertyChanged("CountryCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryName {
-            get {
-                return this.CountryNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
-                    this.CountryNameField = value;
-                    this.RaisePropertyChanged("CountryName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CurrencyName {
-            get {
-                return this.CurrencyNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CurrencyNameField, value) != true)) {
-                    this.CurrencyNameField = value;
-                    this.RaisePropertyChanged("CurrencyName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -250,7 +141,7 @@ namespace Acerpro.Ui.AcerproService {
         private string MessageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Acerpro.Ui.AcerproService.CountryCurrencyDto ResultField;
+        private Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto ResultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ResultTypeField;
@@ -305,7 +196,7 @@ namespace Acerpro.Ui.AcerproService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Acerpro.Ui.AcerproService.CountryCurrencyDto Result {
+        public Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto Result {
             get {
                 return this.ResultField;
             }
@@ -326,99 +217,6 @@ namespace Acerpro.Ui.AcerproService {
                 if ((object.ReferenceEquals(this.ResultTypeField, value) != true)) {
                     this.ResultTypeField = value;
                     this.RaisePropertyChanged("ResultType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CountryCurrencyCreateDto", Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos")]
-    [System.SerializableAttribute()]
-    public partial class CountryCurrencyCreateDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CapitalCityNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CountryNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CurrencyNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CapitalCityName {
-            get {
-                return this.CapitalCityNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CapitalCityNameField, value) != true)) {
-                    this.CapitalCityNameField = value;
-                    this.RaisePropertyChanged("CapitalCityName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryCode {
-            get {
-                return this.CountryCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryCodeField, value) != true)) {
-                    this.CountryCodeField = value;
-                    this.RaisePropertyChanged("CountryCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CountryName {
-            get {
-                return this.CountryNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
-                    this.CountryNameField = value;
-                    this.RaisePropertyChanged("CountryName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CurrencyName {
-            get {
-                return this.CurrencyNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CurrencyNameField, value) != true)) {
-                    this.CurrencyNameField = value;
-                    this.RaisePropertyChanged("CurrencyName");
                 }
             }
         }
@@ -452,7 +250,7 @@ namespace Acerpro.Ui.AcerproService {
         private string MessageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Acerpro.Ui.AcerproService.CountryCodeAndNameDto[] ResultField;
+        private Acerpro.Entities.Concreate.Dtos.ServiceDtos.CountryCodeAndNameDto[] ResultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ResultTypeField;
@@ -507,7 +305,7 @@ namespace Acerpro.Ui.AcerproService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Acerpro.Ui.AcerproService.CountryCodeAndNameDto[] Result {
+        public Acerpro.Entities.Concreate.Dtos.ServiceDtos.CountryCodeAndNameDto[] Result {
             get {
                 return this.ResultField;
             }
@@ -528,68 +326,6 @@ namespace Acerpro.Ui.AcerproService {
                 if ((object.ReferenceEquals(this.ResultTypeField, value) != true)) {
                     this.ResultTypeField = value;
                     this.RaisePropertyChanged("ResultType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CountryCodeAndNameDto", Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDt" +
-        "os")]
-    [System.SerializableAttribute()]
-    public partial class CountryCodeAndNameDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ISOCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISOCode {
-            get {
-                return this.ISOCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISOCodeField, value) != true)) {
-                    this.ISOCodeField = value;
-                    this.RaisePropertyChanged("ISOCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -623,7 +359,7 @@ namespace Acerpro.Ui.AcerproService {
         private string MessageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Acerpro.Ui.AcerproService.CurrencyDto ResultField;
+        private Acerpro.Entities.Concreate.Dtos.ServiceDtos.CurrencyDto ResultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ResultTypeField;
@@ -678,7 +414,7 @@ namespace Acerpro.Ui.AcerproService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Acerpro.Ui.AcerproService.CurrencyDto Result {
+        public Acerpro.Entities.Concreate.Dtos.ServiceDtos.CurrencyDto Result {
             get {
                 return this.ResultField;
             }
@@ -699,68 +435,6 @@ namespace Acerpro.Ui.AcerproService {
                 if ((object.ReferenceEquals(this.ResultTypeField, value) != true)) {
                     this.ResultTypeField = value;
                     this.RaisePropertyChanged("ResultType");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CurrencyDto", Namespace="http://schemas.datacontract.org/2004/07/Acerpro.Entities.Concreate.Dtos.ServiceDt" +
-        "os")]
-    [System.SerializableAttribute()]
-    public partial class CurrencyDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ISOCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISOCode {
-            get {
-                return this.ISOCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISOCodeField, value) != true)) {
-                    this.ISOCodeField = value;
-                    this.RaisePropertyChanged("ISOCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -885,71 +559,71 @@ namespace Acerpro.Ui.AcerproService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AcerproService.ICountryCurrency")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CountryCurrencyWcfService.ICountryCurrency")]
     public interface ICountryCurrency {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Get", ReplyAction="http://tempuri.org/ICountryCurrency/GetResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi Get();
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi Get();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Get", ReplyAction="http://tempuri.org/ICountryCurrency/GetResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetAsync();
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetById", ReplyAction="http://tempuri.org/ICountryCurrency/GetByIdResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetById(int id);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetById", ReplyAction="http://tempuri.org/ICountryCurrency/GetByIdResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIdAsync(int id);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Save", ReplyAction="http://tempuri.org/ICountryCurrency/SaveResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Save(Acerpro.Ui.AcerproService.CountryCurrencyCreateDto createDto);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Save(Acerpro.Entities.Concreate.Dtos.CountryCurrencyCreateDto createDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Save", ReplyAction="http://tempuri.org/ICountryCurrency/SaveResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> SaveAsync(Acerpro.Ui.AcerproService.CountryCurrencyCreateDto createDto);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> SaveAsync(Acerpro.Entities.Concreate.Dtos.CountryCurrencyCreateDto createDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Update", ReplyAction="http://tempuri.org/ICountryCurrency/UpdateResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Update(Acerpro.Ui.AcerproService.CountryCurrencyDto updateDto);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Update(Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto updateDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/Update", ReplyAction="http://tempuri.org/ICountryCurrency/UpdateResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> UpdateAsync(Acerpro.Ui.AcerproService.CountryCurrencyDto updateDto);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> UpdateAsync(Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto updateDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryListResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW GetCountryList();
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW GetCountryList();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryListResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW> GetCountryListAsync();
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW> GetCountryListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CountryCurrency", ReplyAction="http://tempuri.org/ICountryCurrency/CountryCurrencyResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfCurrencyDtoJLzdrnDW CountryCurrency(string countryIsoCode);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCurrencyDtoJLzdrnDW CountryCurrency(string countryIsoCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CountryCurrency", ReplyAction="http://tempuri.org/ICountryCurrency/CountryCurrencyResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCurrencyDtoJLzdrnDW> CountryCurrencyAsync(string countryIsoCode);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCurrencyDtoJLzdrnDW> CountryCurrencyAsync(string countryIsoCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CapitalCity", ReplyAction="http://tempuri.org/ICountryCurrency/CapitalCityResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfstring CapitalCity(string countryIsoCode);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring CapitalCity(string countryIsoCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CapitalCity", ReplyAction="http://tempuri.org/ICountryCurrency/CapitalCityResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CapitalCityAsync(string countryIsoCode);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring> CapitalCityAsync(string countryIsoCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CountryIsoCode", ReplyAction="http://tempuri.org/ICountryCurrency/CountryIsoCodeResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfstring CountryIsoCode(string countryName);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring CountryIsoCode(string countryName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CountryIsoCode", ReplyAction="http://tempuri.org/ICountryCurrency/CountryIsoCodeResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse")]
-        Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode);
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse")]
-        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode);
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICountryCurrencyChannel : Acerpro.Ui.AcerproService.ICountryCurrency, System.ServiceModel.IClientChannel {
+    public interface ICountryCurrencyChannel : Acerpro.Business.CountryCurrencyWcfService.ICountryCurrency, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CountryCurrencyClient : System.ServiceModel.ClientBase<Acerpro.Ui.AcerproService.ICountryCurrency>, Acerpro.Ui.AcerproService.ICountryCurrency {
+    public partial class CountryCurrencyClient : System.ServiceModel.ClientBase<Acerpro.Business.CountryCurrencyWcfService.ICountryCurrency>, Acerpro.Business.CountryCurrencyWcfService.ICountryCurrency {
         
         public CountryCurrencyClient() {
         }
@@ -970,75 +644,75 @@ namespace Acerpro.Ui.AcerproService {
                 base(binding, remoteAddress) {
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi Get() {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi Get() {
             return base.Channel.Get();
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetAsync() {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetAsync() {
             return base.Channel.GetAsync();
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetById(int id) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetById(int id) {
             return base.Channel.GetById(id);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIdAsync(int id) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIdAsync(int id) {
             return base.Channel.GetByIdAsync(id);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Save(Acerpro.Ui.AcerproService.CountryCurrencyCreateDto createDto) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Save(Acerpro.Entities.Concreate.Dtos.CountryCurrencyCreateDto createDto) {
             return base.Channel.Save(createDto);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> SaveAsync(Acerpro.Ui.AcerproService.CountryCurrencyCreateDto createDto) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> SaveAsync(Acerpro.Entities.Concreate.Dtos.CountryCurrencyCreateDto createDto) {
             return base.Channel.SaveAsync(createDto);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Update(Acerpro.Ui.AcerproService.CountryCurrencyDto updateDto) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi Update(Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto updateDto) {
             return base.Channel.Update(updateDto);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> UpdateAsync(Acerpro.Ui.AcerproService.CountryCurrencyDto updateDto) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> UpdateAsync(Acerpro.Entities.Concreate.Dtos.CountryCurrencyDto updateDto) {
             return base.Channel.UpdateAsync(updateDto);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW GetCountryList() {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW GetCountryList() {
             return base.Channel.GetCountryList();
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW> GetCountryListAsync() {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW> GetCountryListAsync() {
             return base.Channel.GetCountryListAsync();
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfCurrencyDtoJLzdrnDW CountryCurrency(string countryIsoCode) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCurrencyDtoJLzdrnDW CountryCurrency(string countryIsoCode) {
             return base.Channel.CountryCurrency(countryIsoCode);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfCurrencyDtoJLzdrnDW> CountryCurrencyAsync(string countryIsoCode) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCurrencyDtoJLzdrnDW> CountryCurrencyAsync(string countryIsoCode) {
             return base.Channel.CountryCurrencyAsync(countryIsoCode);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfstring CapitalCity(string countryIsoCode) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring CapitalCity(string countryIsoCode) {
             return base.Channel.CapitalCity(countryIsoCode);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CapitalCityAsync(string countryIsoCode) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring> CapitalCityAsync(string countryIsoCode) {
             return base.Channel.CapitalCityAsync(countryIsoCode);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfstring CountryIsoCode(string countryName) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring CountryIsoCode(string countryName) {
             return base.Channel.CountryIsoCode(countryName);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName) {
             return base.Channel.CountryIsoCodeAsync(countryName);
         }
         
-        public Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode) {
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode) {
             return base.Channel.GetCountryCurrencyList(isoCode);
         }
         
-        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode) {
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode) {
             return base.Channel.GetCountryCurrencyListAsync(isoCode);
         }
     }

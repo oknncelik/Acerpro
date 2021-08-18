@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="FbJCm74CCGTkRTPlIP3KmXPIZqWTAbLxe0wFEuQ3kSg=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="9YtTUvNUOyoSHKmxUbkq96crqm0HeBzPbR24ivxSrFw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICountryCurrency">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ICountryCurrency" contract="AcerproService.ICountryCurrency" bindingType="basicHttpBinding" address="http://localhost:53856/CountryCurrency.svc" bindingConfiguration="BasicHttpBinding_ICountryCurrency">
+    <endpoint name="BasicHttpBinding_ICountryCurrency" contract="CountryCurrencyWcfService.ICountryCurrency" bindingType="basicHttpBinding" address="http://localhost:53856/CountryCurrency.svc" bindingConfiguration="BasicHttpBinding_ICountryCurrency">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:53856/CountryCurrency.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_ICountryCurrency</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AcerproService.ICountryCurrency</serializedValue>
+          <serializedValue>CountryCurrencyWcfService.ICountryCurrency</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

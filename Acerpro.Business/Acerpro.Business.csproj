@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,10 +45,19 @@
   <ItemGroup>
     <Compile Include="Abstruct\ICountryCurrencyService.cs" />
     <Compile Include="Abstruct\IService.cs" />
+    <Compile Include="Abstruct\UiServices\ICountryCurrencyUiService.cs" />
     <Compile Include="Concreate\CountryCurrencyService.cs" />
+    <Compile Include="Concreate\UiServices\CountryCurrencyUiService.cs" />
+    <Compile Include="Connected Services\CountryCurrencyWcfService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Acerpro.Data\Acerpro.Data.csproj">
       <Project>{8C22F4C8-BFAB-46B3-92B3-E1F91AC0D8AB}</Project>
@@ -64,6 +75,58 @@
       <Project>{A30E1C5D-3426-4B21-BD25-B3CDC4B1091F}</Project>
       <Name>Acerpro.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\CountryCurrencyWcfService\Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCurrencyDtoJLzdrnDW.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency.wsdl" />
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CountryCurrencyWcfService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CountryCurrencyWcfService\CountryCurrency.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CountryCurrencyWcfService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CountryCurrencyWcfService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CountryCurrencyWcfService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

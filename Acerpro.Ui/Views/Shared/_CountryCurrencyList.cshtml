@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Acerpro.Ui.Models.CountryModel>
+
 <table class="table table-striped table-bordered table-hover table-full-width" id="sample_x">
     <thead>
         <tr style=" height: 50px; background: #428bca ; color : #fff ;">
@@ -17,8 +18,22 @@
                 <td> @item.CapitalCity </td>
                 <td> @item.CountryIsoCode </td>
                 <td> @item.CountryCurrency </td>
-                <td> </td>
+                <td>
+
+                    @Ajax.ActionLink("Kaydet", "PostCountryInfo", "home",
+                       item,
+                       new AjaxOptions
+                       {
+                           InsertionMode = InsertionMode.Replace, // yazılma şekli..
+                           UpdateTargetId = "load", //return değerinin yazılacağı element
+                           HttpMethod = "GET", // Metod
+                           LoadingElementId = "load", // bekleme elementi
+                       },
+                       new { @class ="btn btn-default" })
+
+                </td>
             </tr>
         }
     </tbody>
 </table>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

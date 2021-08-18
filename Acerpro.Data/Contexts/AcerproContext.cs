@@ -5,7 +5,7 @@ namespace Acerpro.Data.Contexts
 {
     public class AcerproContext : DbContext
     {
-        public AcerproContext() : base(@"Server=localhost,1433; database=ExampleDB; User ID=sa; password=19Mayis1919!;")
+        public AcerproContext() : base("AcerproDb")
         {
 
         }

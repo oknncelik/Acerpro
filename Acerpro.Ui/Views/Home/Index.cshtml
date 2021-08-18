@@ -10,14 +10,17 @@
 
 
         <br />
-
+        <div id="load">İşlem gerçekleşiyor...</div>
+        <br />
         <div class="col-md-12 m0" style=" margin: 0 !important; padding: 0 !important;" id="currencyList"></div>
     </div>
 
 </div>
 
+<script src="~/Scripts/jquery-3.4.1.slim.js"></script>
 <script type="text/javascript">
     function SelectCountry(val) {
+        $("#load").show();
         $.ajax({
             type: "POST",
             url: "@Url.Action("GetCountryInfo", "Home")",
@@ -26,5 +29,6 @@
                 $( "#currencyList").html(result);
             }
         });
+        $("#load").hide();
     }
 </script> 
