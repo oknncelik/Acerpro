@@ -935,6 +935,12 @@ namespace Acerpro.Ui.AcerproService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/CountryIsoCode", ReplyAction="http://tempuri.org/ICountryCurrency/CountryIsoCodeResponse")]
         System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse")]
+        Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse")]
+        System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1026,6 +1032,14 @@ namespace Acerpro.Ui.AcerproService {
         
         public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfstring> CountryIsoCodeAsync(string countryName) {
             return base.Channel.CountryIsoCodeAsync(countryName);
+        }
+        
+        public Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi GetCountryCurrencyList(string isoCode) {
+            return base.Channel.GetCountryCurrencyList(isoCode);
+        }
+        
+        public System.Threading.Tasks.Task<Acerpro.Ui.AcerproService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode) {
+            return base.Channel.GetCountryCurrencyListAsync(isoCode);
         }
     }
 }

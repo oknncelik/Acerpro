@@ -5,16 +5,26 @@
 <br />
 <div class="container>
     <div class="row">
-        @Html.DropDownList("drCountry", ViewBag.CoutryList as IEnumerable<SelectListItem>, "Select Country", 
+        @Html.DropDownList("drCountry", ViewBag.CoutryList as IEnumerable<SelectListItem>, "Select Country",
                            new { @class = "form-control", onchange = "SelectCountry(this.value)" })
+
+
+        <br />
+
+        <div class="col-md-12 m0" style=" margin: 0 !important; padding: 0 !important;" id="currencyList"></div>
     </div>
+
 </div>
 
-
-
 <script type="text/javascript">
-
     function SelectCountry(val) {
-        alert(val);
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("GetCountryInfo", "Home")",
+            data: { isoCode : val },
+            success: function (result) {
+                $( "#currencyList").html(result);
+            }
+        });
     }
 </script> 

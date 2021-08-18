@@ -122,5 +122,18 @@ namespace Acerpro.Wcf
                 Result = (result as SuccessResult<string>)?.Result
             };
         }
+
+        public async Task<ServiceResult<IList<CountryCurrencyDto>>> GetCountryCurrencyListAsync(string isoCode)
+        {
+            var result = await _countryCurrencyService.GetCountryCurrencyList(isoCode);
+            return new ServiceResult<IList<CountryCurrencyDto>>
+            {
+                Code = result.Code,
+                Message = result.Message,
+                IsSuccess = result.IsSuccess,
+                ResultType = result.ResultType,
+                Result = (result as SuccessResult<IList<CountryCurrencyDto>>)?.Result
+            };
+        }
     }
 }

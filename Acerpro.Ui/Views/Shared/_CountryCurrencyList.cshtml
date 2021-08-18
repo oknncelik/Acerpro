@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Acerpro.Ui.Models.CountryModel>
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_x">
+    <thead>
+        <tr style=" height: 50px; background: #428bca ; color : #fff ;">
+            <th> Ülke</th>
+            <th> Ülke Başkent </th>
+            <th> Ülke Kısaltması </th>
+            <th> Ülke Para Birimi </th>
+            <th class="center" style="width: 140px;">  </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.Country </td>
+                <td> @item.CapitalCity </td>
+                <td> @item.CountryIsoCode </td>
+                <td> @item.CountryCurrency </td>
+                <td>
+                    @*@Html.Action("Kaydet", new { onclick = "SaveCountry(" + @item.CapitalCity + ")" });*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script>
+    function SaveCountry(result) {
+        alert(result);
+    }
+</script>

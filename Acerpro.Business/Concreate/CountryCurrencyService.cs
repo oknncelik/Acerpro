@@ -24,6 +24,33 @@ namespace Acerpro.Business.Concreate
             _countryCurrencyRepository = new CountryCurrencyRepository();
             _countryInfoIntegration = new CountryInfoIntegration();
         }
+
+        public async Task<IResult> GetCountryCurrencyList(string isoCode)
+        {
+            try
+            {
+                var country = ((await GetCountryList()) as SuccessResult<IList<CountryCodeAndNameDto>>).Result.FirstOrDefault(x => x.ISOCode == isoCode);
+                var capitalCity = _countryInfoIntegration.CapitalCity(isoCode);
+                var currency = _countryInfoIntegration.CountryCurrency(isoCode);
+
+                var result = new List<CountryCurrencyDto>
+                {
+                    new CountryCurrencyDto
+                    {
+                        CurrencyName = $"{currency.ISOCode}({currency.Name})",
+                        CapitalCityName = capitalCity,
+                        CountryCode = currency.ISOCode,
+                        CountryName = country.Name
+                    } 
+                };
+                return new SuccessResult<IList<CountryCurrencyDto>>(result, "List of Countries and Currencies");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
+
         public async Task<IResult> Get()
         {
             try
@@ -41,7 +68,7 @@ namespace Acerpro.Business.Concreate
         {
             try
             {
-                var resultList = await _countryCurrencyRepository.Get(x=> x.Id == id);
+                var resultList = await _countryCurrencyRepository.Get(x => x.Id == id);
                 return new SuccessResult<CountryCurrencyDto>(EntityToData(resultList), "Country and Currency");
             }
             catch (Exception ex)
@@ -106,7 +133,7 @@ namespace Acerpro.Business.Concreate
         {
             try
             {
-                return new SuccessResult<IList<CountryCodeAndNameDto>>(await Task.Run(() => _countryInfoIntegration.ListOfCountryNamesByCode()), 
+                return new SuccessResult<IList<CountryCodeAndNameDto>>(await Task.Run(() => _countryInfoIntegration.ListOfCountryNamesByCode()),
                     "List of Country");
             }
             catch (Exception ex)
