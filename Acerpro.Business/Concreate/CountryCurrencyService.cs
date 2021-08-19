@@ -40,7 +40,8 @@ namespace Acerpro.Business.Concreate
                         CurrencyName = $"{currency?.ISOCode}({currency?.Name})",
                         CapitalCityName = capitalCity,
                         CountryCode = currency?.ISOCode,
-                        CountryName = country?.Name
+                        CountryName = country?.Name,
+                        CountryIsoCode = country?.ISOCode,
                     } 
                 };
                 return new SuccessResult<IList<CountryCurrencyDto>>(result, "List of Countries and Currencies");
@@ -77,10 +78,28 @@ namespace Acerpro.Business.Concreate
             }
         }
 
+
+        public async Task<IResult> GetByIsoCode(string isoCode)
+        {
+            try
+            {
+                var resultList = await _countryCurrencyRepository.Get(x => x.CountryIsoCode == isoCode);
+                return new SuccessResult<CountryCurrencyDto>(EntityToData(resultList), "Country and Currency");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult(ex.Message);
+            }
+        }
+
         public async Task<IResult> Save(CountryCurrencyCreateDto createDto)
         {
             try
             {
+                var isExist = await _countryCurrencyRepository.Get(x => x.CountryIsoCode == createDto.CountryIsoCode);
+                if (isExist != null)
+                    return new WarningResult("Currency was added.");
+
                 var resultList = await _countryCurrencyRepository.Add(DataToEntity(createDto));
                 return new SuccessResult<CountryCurrencyDto>(EntityToData(resultList), "Currency Created.");
             }
@@ -164,9 +183,11 @@ namespace Acerpro.Business.Concreate
             {
                 Id = currency.Id,
                 CountryCode = currency.CountryCode,
+                CountryIsoCode = currency.CountryIsoCode,   
                 CountryName = currency.CountryName,
                 CapitalCityName = currency.CapitalCityName,
-                CurrencyName = currency.CurrencyName
+                CurrencyName = currency.CurrencyName,
+                ActiveFlag = currency.ActiveFlag
             };
         }
 
@@ -178,6 +199,7 @@ namespace Acerpro.Business.Concreate
             return new CountryCurrency
             {
                 CountryCode = currency.CountryCode,
+                CountryIsoCode = currency.CountryIsoCode,
                 CountryName = currency.CountryName,
                 CapitalCityName = currency.CapitalCityName,
                 CurrencyName = currency.CurrencyName,
@@ -194,6 +216,7 @@ namespace Acerpro.Business.Concreate
             {
                 Id = currency.Id,
                 CountryCode = currency.CountryCode,
+                CountryIsoCode= currency.CountryIsoCode,
                 CountryName = currency.CountryName,
                 CapitalCityName = currency.CapitalCityName,
                 CurrencyName = currency.CurrencyName,

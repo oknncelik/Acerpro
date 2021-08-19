@@ -16,21 +16,22 @@
             <tr>
                 <td> @item.Country </td>
                 <td> @item.CapitalCity </td>
-                <td> @item.CountryIsoCode </td>
+                <td> @item.CountryCode </td>
                 <td> @item.CountryCurrency </td>
                 <td>
-
-                    @Ajax.ActionLink("Kaydet", "PostCountryInfo", "home",
-                       item,
-                       new AjaxOptions
-                       {
-                           InsertionMode = InsertionMode.Replace, // yazılma şekli..
-                           UpdateTargetId = "load", //return değerinin yazılacağı element
-                           HttpMethod = "GET", // Metod
-                           LoadingElementId = "load", // bekleme elementi
-                       },
-                       new { @class ="btn btn-default" })
-
+                    @if (!item.ActiveFlag)
+                    {
+                        @Ajax.ActionLink("Kaydet", "PostCountryInfo", "home",
+                           item,
+                           new AjaxOptions
+                           {
+                               InsertionMode = InsertionMode.Replace, // yazılma şekli..
+                               UpdateTargetId = "result", //return değerinin yazılacağı element
+                               HttpMethod = "GET", // Metod
+                               LoadingElementId = "load", // bekleme elementi
+                           },
+                           new { @class = "btn btn-default" })
+                    }
                 </td>
             </tr>
         }

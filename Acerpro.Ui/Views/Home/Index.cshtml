@@ -10,7 +10,8 @@
 
 
         <br />
-        <div id="load">İşlem gerçekleşiyor...</div>
+        <div id="load" style="display:none">İşlem gerçekleşiyor...</div>
+        <div id="result"></div>
         <br />
         <div class="col-md-12 m0" style=" margin: 0 !important; padding: 0 !important;" id="currencyList"></div>
     </div>
@@ -20,6 +21,7 @@
 <script src="~/Scripts/jquery-3.4.1.slim.js"></script>
 <script type="text/javascript">
     function SelectCountry(val) {
+        $("#result").html("");
         $("#load").show();
         $.ajax({
             type: "POST",
@@ -27,8 +29,10 @@
             data: { isoCode : val },
             success: function (result) {
                 $( "#currencyList").html(result);
+            },
+            complete: function () {
+                $("#load").hide();
             }
         });
-        $("#load").hide();
     }
 </script> 

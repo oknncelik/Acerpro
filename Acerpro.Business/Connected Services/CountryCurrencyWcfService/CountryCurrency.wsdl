@@ -63,6 +63,12 @@
   <wsdl:message name="ICountryCurrency_GetCountryCurrencyList_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCountryCurrencyListResponse" />
   </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetByIsoCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIsoCode" />
+  </wsdl:message>
+  <wsdl:message name="ICountryCurrency_GetByIsoCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIsoCodeResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICountryCurrency">
     <wsdl:operation name="Get">
       <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/Get" message="tns:ICountryCurrency_Get_InputMessage" />
@@ -99,6 +105,10 @@
     <wsdl:operation name="GetCountryCurrencyList">
       <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList" message="tns:ICountryCurrency_GetCountryCurrencyList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse" message="tns:ICountryCurrency_GetCountryCurrencyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByIsoCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICountryCurrency/GetByIsoCode" message="tns:ICountryCurrency_GetByIsoCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICountryCurrency/GetByIsoCodeResponse" message="tns:ICountryCurrency_GetByIsoCode_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICountryCurrency" type="tns:ICountryCurrency">
@@ -177,6 +187,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetCountryCurrencyList">
       <soap:operation soapAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByIsoCode">
+      <soap:operation soapAction="http://tempuri.org/ICountryCurrency/GetByIsoCode" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

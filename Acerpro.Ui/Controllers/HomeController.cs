@@ -42,7 +42,9 @@ namespace Acerpro.Ui.Controllers
                     Country = item.CountryName,
                     CapitalCity = item.CapitalCityName,
                     CountryCurrency = item.CurrencyName,
-                    CountryIsoCode = item.CountryCode
+                    CountryCode = item.CountryCode,
+                    CountryIsoCode = item.CountryIsoCode,
+                    ActiveFlag = item.ActiveFlag
                 });
             }
             return PartialView("_CountryCurrencyList", countryCurrencyList);
@@ -55,7 +57,8 @@ namespace Acerpro.Ui.Controllers
             {
                 CurrencyName = model.CountryCurrency,
                 CapitalCityName = model.CapitalCity,
-                CountryCode = model.CountryIsoCode,
+                CountryCode = model.CountryCode,
+                CountryIsoCode = model.CountryIsoCode,
                 CountryName = model.Country
             });
             return Json(serviceResult.Message, JsonRequestBehavior.AllowGet);

@@ -36,6 +36,9 @@ namespace Acerpro.Wcf
 
         [OperationContract]
         Task<ServiceResult<IList<CountryCurrencyDto>>> GetCountryCurrencyListAsync(string isoCode);
+
+        [OperationContract]
+        Task<ServiceResult<CountryCurrencyDto>> GetByIsoCodeAsync(string isoCode);
     }
 
 

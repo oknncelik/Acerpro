@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfCountryCurrencyDto" nillable="true" type="tns:ArrayOfCountryCurrencyDto" />
   <xs:complexType name="CountryCurrencyDto">
     <xs:sequence>
+      <xs:element minOccurs="0" name="ActiveFlag" type="xs:boolean" />
       <xs:element minOccurs="0" name="CapitalCityName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />

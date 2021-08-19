@@ -615,6 +615,12 @@ namespace Acerpro.Business.CountryCurrencyWcfService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetCountryCurrencyList", ReplyAction="http://tempuri.org/ICountryCurrency/GetCountryCurrencyListResponse")]
         System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetByIsoCode", ReplyAction="http://tempuri.org/ICountryCurrency/GetByIsoCodeResponse")]
+        Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetByIsoCode(string isoCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryCurrency/GetByIsoCode", ReplyAction="http://tempuri.org/ICountryCurrency/GetByIsoCodeResponse")]
+        System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIsoCodeAsync(string isoCode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -714,6 +720,14 @@ namespace Acerpro.Business.CountryCurrencyWcfService {
         
         public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi> GetCountryCurrencyListAsync(string isoCode) {
             return base.Channel.GetCountryCurrencyListAsync(isoCode);
+        }
+        
+        public Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi GetByIsoCode(string isoCode) {
+            return base.Channel.GetByIsoCode(isoCode);
+        }
+        
+        public System.Threading.Tasks.Task<Acerpro.Business.CountryCurrencyWcfService.ServiceResultOfCountryCurrencyDtoNGKS6tMi> GetByIsoCodeAsync(string isoCode) {
+            return base.Channel.GetByIsoCodeAsync(isoCode);
         }
     }
 }

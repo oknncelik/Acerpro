@@ -11,5 +11,6 @@ namespace Acerpro.Business.Abstruct
         Task<IResult> CapitalCity(string countryIsoCode);
         Task<IResult> CountryIsoCode(string countryName);
         Task<IResult> GetCountryCurrencyList(string isoCode);
+        Task<IResult> GetByIsoCode(string isoCode);
     }
 }

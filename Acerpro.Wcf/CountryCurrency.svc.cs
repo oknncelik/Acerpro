@@ -45,6 +45,19 @@ namespace Acerpro.Wcf
             };
         }
 
+        public async Task<ServiceResult<CountryCurrencyDto>> GetByIsoCodeAsync(string isoCode)
+        {
+            var result = await _countryCurrencyService.GetByIsoCode(isoCode);
+            return new ServiceResult<CountryCurrencyDto>
+            {
+                Code = result.Code,
+                Message = result.Message,
+                IsSuccess = result.IsSuccess,
+                ResultType = result.ResultType,
+                Result = (result as SuccessResult<CountryCurrencyDto>)?.Result
+            };
+        }
+
         public async Task<ServiceResult<CountryCurrencyDto>> SaveAsync(CountryCurrencyCreateDto createDto)
         {
             var result = await _countryCurrencyService.Save(createDto);

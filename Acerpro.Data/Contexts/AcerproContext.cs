@@ -5,7 +5,7 @@ namespace Acerpro.Data.Contexts
 {
     public class AcerproContext : DbContext
     {
-        public AcerproContext() : base("AcerproDb")
+        public AcerproContext() : base("AppDb")
         {
 
         }

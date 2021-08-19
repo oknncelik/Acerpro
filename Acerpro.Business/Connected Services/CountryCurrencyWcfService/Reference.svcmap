@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="d541e17a-6f22-4dd7-bff3-e1d92723f66b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="f0aedf5c-623d-4627-ac0a-8cbd60ec4ca1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53856/CountryCurrency.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:53856/CountryCurrency.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CountryCurrency.xsd" MetadataType="Schema" ID="159d6b82-24ac-4978-bb11-66fadb4853ae" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd3" />
-    <MetadataFile FileName="CountryCurrency1.xsd" MetadataType="Schema" ID="8cdfd539-c729-459b-af71-8b662685c001" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd4" />
-    <MetadataFile FileName="CountryCurrency.disco" MetadataType="Disco" ID="883a27b7-ce1f-43d8-a458-065fea672482" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?disco" />
-    <MetadataFile FileName="CountryCurrency.wsdl" MetadataType="Wsdl" ID="e1ab32c2-6521-4fda-b90a-df4c14ed79a3" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?wsdl" />
-    <MetadataFile FileName="CountryCurrency2.xsd" MetadataType="Schema" ID="22f568e2-edfd-47c8-9cdf-10e4761bb72e" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd2" />
-    <MetadataFile FileName="CountryCurrency3.xsd" MetadataType="Schema" ID="26a8bfd6-dea4-4327-8c76-2013294c6cfb" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd1" />
-    <MetadataFile FileName="CountryCurrency4.xsd" MetadataType="Schema" ID="e2a59dbb-085f-48e3-8d82-acbaaf13c576" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd0" />
+    <MetadataFile FileName="CountryCurrency.xsd" MetadataType="Schema" ID="5bfb3ae4-e988-408f-8522-857c9f915561" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd3" />
+    <MetadataFile FileName="CountryCurrency1.xsd" MetadataType="Schema" ID="792124b9-3522-4ff1-97f9-c52c0c05ec45" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd4" />
+    <MetadataFile FileName="CountryCurrency.wsdl" MetadataType="Wsdl" ID="491c7196-81df-403c-aa6b-d4a90e8b336e" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?wsdl" />
+    <MetadataFile FileName="CountryCurrency2.xsd" MetadataType="Schema" ID="ab5147f5-a817-49da-aa7f-d6599e00d39c" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd2" />
+    <MetadataFile FileName="CountryCurrency3.xsd" MetadataType="Schema" ID="5f0c5f4a-3d1d-410d-8f1c-caae3a2d6bab" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd1" />
+    <MetadataFile FileName="CountryCurrency4.xsd" MetadataType="Schema" ID="ddcf65be-6f8d-43bd-8b22-fd27da3bb59b" SourceId="1" SourceUrl="http://localhost:53856/CountryCurrency.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
