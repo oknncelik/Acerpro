@@ -6,6 +6,7 @@ using Acerpro.Shared.Results;
 using Acerpro.Shared.Results.Abstruct;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Acerpro.Business.Concreate.UiServices
 {
@@ -18,10 +19,10 @@ namespace Acerpro.Business.Concreate.UiServices
             _countryCurrencyWcfService = new CountryCurrencyClient();
         }
 
-        public IResult GetCountryCurrencyList(string isoCode)
+        public async Task<IResult> GetCountryCurrencyList(string isoCode)
         {
             //Kayıtlıysa dbden çek.
-            var dbResult = _countryCurrencyWcfService.GetByIsoCode(isoCode);
+            var dbResult = await Task.Run(()=> _countryCurrencyWcfService.GetByIsoCode(isoCode));
             if (dbResult.Result != null)
             {
                 var list = new List<CountryCurrencyDto>()
@@ -40,7 +41,7 @@ namespace Acerpro.Business.Concreate.UiServices
 
 
             ServiceResultOfArrayOfCountryCurrencyDtoNGKS6tMi serviceResult;
-            serviceResult = _countryCurrencyWcfService.GetCountryCurrencyList(isoCode);
+            serviceResult = await Task.Run(() => _countryCurrencyWcfService.GetCountryCurrencyList(isoCode));
             if (serviceResult.IsSuccess)
             {
                 var result = serviceResult.Result.Select(x => new CountryCurrencyDto
@@ -58,10 +59,10 @@ namespace Acerpro.Business.Concreate.UiServices
                 return new ErrorResult(serviceResult.Message);
         }
 
-        public IResult GetCountryList()
+        public async Task<IResult> GetCountryList()
         {
             ServiceResultOfArrayOfCountryCodeAndNameDtoJLzdrnDW serviceResult;
-            serviceResult = _countryCurrencyWcfService.GetCountryList();
+            serviceResult = await Task.Run(() => _countryCurrencyWcfService.GetCountryList());
 
             if (serviceResult.IsSuccess)
             {
@@ -77,10 +78,10 @@ namespace Acerpro.Business.Concreate.UiServices
                 return new ErrorResult(serviceResult.Message);
         }
 
-        public IResult Save(CountryCurrencyCreateDto createDto)
+        public async Task<IResult> Save(CountryCurrencyCreateDto createDto)
         {
             ServiceResultOfCountryCurrencyDtoNGKS6tMi serviceResult;
-            serviceResult = _countryCurrencyWcfService.Save(createDto);
+            serviceResult = await Task.Run(()=> _countryCurrencyWcfService.Save(createDto));
 
             if (serviceResult.IsSuccess)
             {

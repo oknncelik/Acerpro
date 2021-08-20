@@ -28,7 +28,8 @@
             url: "@Url.Action("GetCountryInfo", "Home")",
             data: { isoCode : val },
             success: function (result) {
-                $( "#currencyList").html(result);
+                $("#currencyList").empty();
+                $("#currencyList").html(result);
             },
             complete: function () {
                 $("#load").hide();
