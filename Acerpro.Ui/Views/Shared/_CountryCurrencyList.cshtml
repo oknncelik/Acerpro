@@ -25,15 +25,17 @@
                            item,
                            new AjaxOptions
                            {
+                               AllowCache = false,
                                UpdateTargetId = "result", //return değerinin yazılacağı element
-                               HttpMethod = "GET", // Metod
+                               HttpMethod = "POST", // Metod
                                LoadingElementId = "load", // bekleme elementi
                            },
-                           new { @class = "btn btn-default" })
+                           new { @class = "btn btn-default", id = "btn_" + @item.Country })
                     }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>  
+

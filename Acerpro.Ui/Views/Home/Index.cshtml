@@ -22,13 +22,13 @@
 <script type="text/javascript">
     function SelectCountry(val) {
         $("#result").html("");
+        $("#currencyList").empty();
         $("#load").show();
         $.ajax({
             type: "POST",
             url: "@Url.Action("GetCountryInfo", "Home")",
             data: { isoCode : val },
-            success: function (result) {
-                $("#currencyList").empty();
+            success: function (result) {               
                 $("#currencyList").html(result);
             },
             complete: function () {
