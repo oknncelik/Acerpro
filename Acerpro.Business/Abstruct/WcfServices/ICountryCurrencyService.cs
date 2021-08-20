@@ -2,7 +2,7 @@
 using Acerpro.Shared.Results.Abstruct;
 using System.Threading.Tasks;
 
-namespace Acerpro.Business.Abstruct
+namespace Acerpro.Business.Abstruct.WcfServices
 {
     public interface ICountryCurrencyService : IService<CountryCurrencyCreateDto, CountryCurrencyDto>
     {

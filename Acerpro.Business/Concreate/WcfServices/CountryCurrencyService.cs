@@ -1,4 +1,4 @@
-﻿using Acerpro.Business.Abstruct;
+﻿using Acerpro.Business.Abstruct.WcfServices;
 using Acerpro.Data.Abstruct.Repositories;
 using Acerpro.Data.Concreate.Repositories;
 using Acerpro.Entities.Concreate.Dtos;
@@ -13,8 +13,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Acerpro.Business.Concreate
+namespace Acerpro.Business.Concreate.WcsServices
 {
+    //Wcf Servisten gelen isteklerin gerçekleştiği class.
     public class CountryCurrencyService : ICountryCurrencyService
     {
         private readonly ICountryCurrencyRepository _countryCurrencyRepository;

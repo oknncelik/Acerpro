@@ -1,5 +1,7 @@
 ﻿using Acerpro.Business.Abstruct;
+using Acerpro.Business.Abstruct.WcfServices;
 using Acerpro.Business.Concreate;
+using Acerpro.Business.Concreate.WcsServices;
 using Acerpro.Entities.Concreate.Dtos;
 using Acerpro.Entities.Concreate.Dtos.ServiceDtos;
 using Acerpro.Shared.Results;

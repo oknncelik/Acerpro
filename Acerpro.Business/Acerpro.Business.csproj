@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstruct\ICountryCurrencyService.cs" />
+    <Compile Include="Abstruct\WcfServices\ICountryCurrencyService.cs" />
     <Compile Include="Abstruct\IService.cs" />
     <Compile Include="Abstruct\UiServices\ICountryCurrencyUiService.cs" />
-    <Compile Include="Concreate\CountryCurrencyService.cs" />
+    <Compile Include="Concreate\WcfServices\CountryCurrencyService.cs" />
     <Compile Include="Concreate\UiServices\CountryCurrencyUiService.cs" />
     <Compile Include="Connected Services\CountryCurrencyWcfService\Reference.cs">
       <AutoGen>True</AutoGen>

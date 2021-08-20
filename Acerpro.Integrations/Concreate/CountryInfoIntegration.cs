@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace Acerpro.Integrations.Concreate
 {
+    //CountryInfoService entegre olunur.
     public class CountryInfoIntegration : ICountryInfoIntegration
     {
         private CountryInfoService.CountryInfoService _service; 

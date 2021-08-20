@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Acerpro.Business.Concreate.UiServices
 {
+    //Ui dan gelen istekler için WCF e istek atılır.
     public class CountryCurrencyUiService : ICountryCurrencyUiService
     {
         private readonly ICountryCurrency _countryCurrencyWcfService;

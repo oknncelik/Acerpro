@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Acerpro.Data.Concreate
 {
+    //Generic Repository class
     public class Context<TEntity, TContext> : IContext<TEntity>
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
